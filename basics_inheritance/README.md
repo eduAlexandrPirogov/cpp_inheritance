@@ -39,12 +39,12 @@ class Cat : public Animal
 int main()
 {
    Animal a {};
+   a.setName("Vasya");
    cout << a.getName() << endl;
    a.voice();
-   a.move();
-   a.setName("Vasya");
 
    Cat cat {};
+   cat.setName("TOM");
    cout << cat.getName() << endl;
    cat.voice();
    return 0;
@@ -53,9 +53,9 @@ int main()
 Результат программы 
 
 ```
-Nameless animal
-Animal do voice 
-Nameless cat
-Animal do voice
+Vasya
+Animal with name: Vasya do voice
+TOM
+Animal with name: TOM do voice
 ```
 
