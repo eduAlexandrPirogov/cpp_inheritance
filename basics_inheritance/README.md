@@ -32,3 +32,30 @@ class Cat : public Animal
 };
 
 ```
+
+Класс Cat имеет все поля и методы (кроме private).
+
+```cpp
+int main()
+{
+   Animal a {};
+   cout << a.getName() << endl;
+   a.voice();
+   a.move();
+   a.setName("Vasya");
+
+   Cat cat {};
+   cout << cat.getName() << endl;
+   cat.voice();
+   return 0;
+};
+
+Результат программы 
+
+```
+Nameless animal
+Animal do voice 
+Nameless cat
+Animal do voice
+```
+
