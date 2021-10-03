@@ -1,0 +1,56 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class Animal
+{
+   public:
+      Animal();
+      Animal(string name);
+      void move();
+      void voice();
+      void setName(string name);
+      string getName();
+   protected:
+   private:
+      string name;
+      int xPosition;      int yPOsition;
+};
+
+Animal::Animal()
+{
+   name = "Nameless animal";
+   xPosition = yPosition = 0;
+};
+
+Animal::Animal(string name) : name(name)
+{
+   xPosition = yPosition = 0;
+};
+
+Animal::Animal(string name, int x, int y) : name(name),
+      xPosition(x), yPosition(y)
+{
+
+};
+
+void Animal::move()
+{
+   
+};
+
+void Animal::voice()
+{
+   cout << "Animal do voice\n";
+};
+
+void Animal::setName(string name)
+{
+   this->name = name;
+};
+
+string Animal getName()
+{
+   return this->name;
+};

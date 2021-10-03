@@ -24,7 +24,7 @@ class Animal
 
 Animal::Animal()
 {
-   name = "Nameless animal";
+   name = "Nameless";
    xPosition = 0;
 };
 
@@ -38,7 +38,7 @@ Animal::Animal(string name, int x, int y) : name(name),
 
 void Animal::move(){ this->xPosition++;};
 
-void Animal::voice() { cout << "Animal do voice\n"; };
+void Animal::voice() { cout << typeid(this).name() << " with name: " <<  getName() << " do voice\n"; };
 
 void Animal::setName(string name){ this->name = name;};
 

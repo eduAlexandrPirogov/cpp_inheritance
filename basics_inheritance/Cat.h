@@ -11,4 +11,4 @@ class Cat : public Animal
       Cat();
 };
 
-Cat::Cat() : Animal() {this->name = "Nameless cat"; };
+Cat::Cat() : Animal() { this->name = "Cat"; };

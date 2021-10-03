@@ -7,12 +7,12 @@ using namespace std;
 int main()
 {
    Animal a {};
+   a.setName("Vasya");
    cout << a.getName() << endl;
    a.voice();
-   a.move();
-   a.setName("Vasya");
 
    Cat cat {};
+   cat.setName("TOM");
    cout << cat.getName() << endl;
    cat.voice();
    return 0;
