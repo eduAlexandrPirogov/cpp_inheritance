@@ -97,12 +97,24 @@ int main()
 уровень доступа членов производного класса соответствует базовому классу.
 
 ```cpp
-publicFunc(). n = 1
+publicFunc() n = 1
 protectedFunc()
 privateFunc()
-publicFunc(). n = 1
+publicFunc() n = 1
 protectedFunc()
 privateFunc()
 ```
 
+При использовании `protected`,доступ к наследованным элементам будет закрыт,
+а при попытки вызвать, будет выброшено исключени.
 
+class Derived2 : protected Base
+{
+   public:
+       void foo2()
+       {
+          publicFunc();
+          protectedFunc();
+          //privateFunc(); Scope Exception
+       };
+};
