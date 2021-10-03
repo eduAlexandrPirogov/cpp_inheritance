@@ -79,3 +79,30 @@ class DerivedClass1 : public Base
     };
 };
 ```
+
+Проверим:
+
+```cpp
+int main()
+{
+   Base base{};
+   DerivedClass1 derived{};
+   base.foo();
+   derived.foo();
+   return 0;
+};
+```
+
+Так как модификатор доступа при наследовании мы указали `public`, то 
+уровень доступа членов производного класса соответствует базовому классу.
+
+```cpp
+publicFunc(). n = 1
+protectedFunc()
+privateFunc()
+publicFunc(). n = 1
+protectedFunc()
+privateFunc()
+```
+
+
