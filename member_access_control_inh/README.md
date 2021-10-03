@@ -4,7 +4,7 @@
 реализации и защищённых членов, которые используются производными классами. 
 Спецификатор доступа действует для всех членов, объявленныъ после него, пока не будет объявлен следующий спецификатор доступа.
 
-Имеем три спецификатора достпа:
+Имеем три спецификатора досутпа:
 1. public
 2. protected
 3. private
@@ -26,3 +26,56 @@
 Элеметны класса, имеющий доступ уровня `public`, становятся доступными из любой функции.
 При наследовании, если указан уровень доступа `public`, все члены и методы производного класса имеют уровень доступа, соответствующий базовому классу.
 
+Рассмотрим пример. Создадим класс `Base`:
+```cpp
+class Base
+{
+    public:
+       void foo();
+       void publicFunc();
+    protected:
+       int n = 0;
+       void protectedFunc();
+    private:
+       void privateFunc();
+};
+
+void Base::foo()
+{
+   publicFunc();
+   protectedFunc();
+   privateFunc();
+};
+
+void Base::publicFunc()
+{
+   n++;
+   std::cout << "publicFunc(). n = " << n << "\n";
+};
+
+void Base::protectedFunc()
+{
+   std::cout << "protectedFunc()\n";
+};
+
+void Base::privateFunc()\
+{
+   std::cout << "privateFunc()\n";
+};
+```
+
+Создадим класс `DerivedClass1` и наследуемся от `Base`, используя спецификатор
+доступа `public`:
+
+```cpp
+class DerivedClass1 : public Base
+{
+    public:
+    void foo2()
+    {
+       publicFunc();
+       protectedFunc();
+    // privateFunc(); Scope Exception 
+    };
+};
+```

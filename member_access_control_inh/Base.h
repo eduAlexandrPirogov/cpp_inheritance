@@ -35,3 +35,4 @@ void Base::privateFunc()\
 {
    std::cout << "privateFunc()\n";
 };
+
