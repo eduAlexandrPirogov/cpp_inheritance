@@ -26,6 +26,7 @@ Animal::Animal()
 {
    name = "Nameless";
    xPosition = 0;
+   std::cout << "Animal's constructor\n";
 };
 
 Animal::Animal(string name) : name(name) 

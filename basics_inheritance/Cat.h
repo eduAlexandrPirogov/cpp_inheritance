@@ -11,4 +11,8 @@ class Cat : public Animal
       Cat();
 };
 
-Cat::Cat() : Animal() { this->name = "Cat"; };
+Cat::Cat() : Animal()
+{
+    this->name = "Cat";
+    std::cout << "Cat's constructor\n";
+};

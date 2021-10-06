@@ -10,10 +10,5 @@ int main()
    DerivedClass1 derived{};
    base.foo();
    derived.foo();
-   derived.foo();
-   derived.foo();
-   base.foo();
-   derived.foo2();
-   base.foo();
    return 0;
 };
